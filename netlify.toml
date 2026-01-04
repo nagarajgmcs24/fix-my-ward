@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build:client"
-  functions = "netlify/functions"
+  base = "client"
+  command = "npm install && npm run build"
   publish = "dist"
 
 
