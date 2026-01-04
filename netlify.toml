@@ -1,15 +1,4 @@
 [build]
-  base = "client"
-  command = "npm install && npm run build"
+  command = "npm install && npx vite build"
   publish = "dist"
 
-
-[functions]
-  external_node_modules = ["express"]
-  node_bundler = "esbuild"
-  
-[[redirects]]
-  force = true
-  from = "/api/*"
-  status = 200
-  to = "/.netlify/functions/api/:splat"
